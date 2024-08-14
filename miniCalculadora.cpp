@@ -41,7 +41,7 @@ void leerNumeros(vector<double>& numeros) {
 }
 
 // Funciones para las operaciones matemáticas
-double sumar(const vector<double>& numeros) {
+double sumar(const vector<double> numeros) {
     double resultado = 0;
     for (double numero : numeros) {
         resultado += numero;
@@ -49,7 +49,7 @@ double sumar(const vector<double>& numeros) {
     return resultado;
 }
 
-double restar(const vector<double>& numeros){
+double restar(const vector<double> numeros){
     double resultado = numeros[0];
     for (int i = 1; i < numeros.size(); ++i) {
         resultado -= numeros[i];
@@ -57,7 +57,7 @@ double restar(const vector<double>& numeros){
     return resultado;
 }
 
-double multiplicar(const vector<double>& numeros){
+double multiplicar(const vector<double> numeros){
     double resultado = 1;
     for (double numero : numeros) {
         resultado *= numero;
@@ -65,7 +65,7 @@ double multiplicar(const vector<double>& numeros){
     return resultado;
 }
 
-double dividir(const vector<double>& numeros){
+double dividir(const vector<double> numeros){
     double resultado = numeros[0];
     for (int i = 1; i < numeros.size(); ++i) {
         if (numeros[i] == 0) {
@@ -78,7 +78,7 @@ double dividir(const vector<double>& numeros){
 }
 
 // Función para realizar la operación seleccionada
-double realizarOperacion(int opcion, const vector<double>& numeros, double resultado_previo, int contador) {
+double realizarOperacion(int opcion, const vector<double> numeros, double resultado_previo, int contador) {
     double resultado;
     switch (opcion) {
         case 1:
@@ -166,7 +166,7 @@ int main() {
         cin >> continuar;
 
         //Guarda para validar si/no
-        while(continuar != 's' || continuar != 'n') {
+        while(continuar != 's' && continuar != 'n') {
             cout << endl;
             cout << "Por favor, ingrese 's' para realizar otra operación o 'n' para salir: ";
             cin >> continuar;
